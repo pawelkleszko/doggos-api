@@ -58,7 +58,11 @@ class Doggos {
         btn.classList.add('buttons__btn');
         btn.innerHTML = name;
         btn.addEventListener('click', () => {
-            window.scrollTo(0, 0);
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+            });
             this.getDoggoImgByBreed(type)
                 .then(img => this.showDoggo(img))
         })
