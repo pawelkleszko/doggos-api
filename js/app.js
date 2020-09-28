@@ -1,3 +1,5 @@
+import '../sass/style.scss';
+
 class Doggos {
     constructor() {
         this.imgEl = document.querySelector('.doggos__img img');
@@ -77,6 +79,14 @@ class Doggos {
                     }
                 }
             })
+    }
+
+    showLoading() {
+        this.spinnerEl.classList.add('spinner--visible');
+    }
+
+    hideLoading() {
+        this.spinnerEl.classList.remove('spinner--visible');
     }
 
 

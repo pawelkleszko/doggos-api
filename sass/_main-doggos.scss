@@ -1,0 +1,26 @@
+.doggos {
+    &__container {
+        max-width: $wrapper-width;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        max-height: 400px;
+        overflow: hidden;
+
+        img {
+            max-height: 350px;
+            max-width: 100%;
+        }
+    }
+
+    &__description {
+        margin-bottom: $main-spacing;
+        font-size: $font-size;
+        font-family: $main-font;
+        flex-grow: 1;
+    }
+}

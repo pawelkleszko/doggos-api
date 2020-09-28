@@ -1,0 +1,40 @@
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: $main-spacing;
+
+    &__title {
+        padding: $main-spacing;
+    }
+
+    &__container {
+        padding: $main-spacing;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+
+        button {
+            padding: $main-spacing;
+            margin: $main-spacing 0;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            background-color: $main-color;
+            border: 2px solid white;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                color: $main-color;
+                background-color: white;
+            }
+        }
+    }
+
+}
