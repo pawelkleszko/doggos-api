@@ -5,6 +5,8 @@ class Doggos {
         this.imgEl = document.querySelector('.doggos__img img');
         this.apiUrl = 'https://dog.ceo/api/';
         this.btnsBreeds = document.querySelector('.buttons__container');
+        this.background = document.querySelector('.doggos__container');
+        this.spinnerEl = document.querySelector('.spinner');
 
         this.init()
     }
@@ -32,10 +34,14 @@ class Doggos {
     }
 
     showDoggo(img) {
+        this.showLoading();
         this.imgEl.setAttribute('src', img);
+        this.hideLoading();
+        // this.background.style.backgroundImage = `url("${img}")`;
     }
 
     init() {
+        this.showLoading();
         this.getRandomDoggoImg()
             .then(img => this.showDoggo(img))
 

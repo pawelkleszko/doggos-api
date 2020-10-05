@@ -21,8 +21,7 @@ module.exports = {
     },
 
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
@@ -39,7 +38,9 @@ module.exports = {
     },
 
     plugins: [
-        new HtmlWebpackPlugin({template: './index.html'}),
+        new HtmlWebpackPlugin({
+            template: './index.html'
+        }),
         new webpack.HotModuleReplacementPlugin(),
     ]
 };
